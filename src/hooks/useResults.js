@@ -11,6 +11,7 @@ export default () => {
         params: { limit: 50, term: searchTerm, location: "san jose" },
       });
       setResults(response.data.businesses);
+      setErrorMessage(null);
     } catch (err) {
       setErrorMessage("Something went wrong");
     }
